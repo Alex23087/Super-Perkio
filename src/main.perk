@@ -1,0 +1,302 @@
+import "stdio.h"
+import "SDL2/SDL.h"
+extern printf : (char*, ...) -> int
+// extern SDL_Init : int -> int
+// extern SDL_GetError : () ->  char*
+// extern SDL_CreateWindow : (char*, int, int, int, int, int) -> Window
+// extern SDL_CreateRenderer : (void*, int, int) -> Renderer
+extern SDL_WINDOWPOS_CENTERED : int
+extern SDL_RENDERER_ACCELERATED : int
+extern SDL_WINDOW_SHOWN : int
+extern SDL_INIT_VIDEO : int
+// extern SDL_Quit : () -> void
+// extern SDL_DestroyWindow : void* -> void
+
+let ground_green := (0, 150, 0, 255)
+let sky_blue := (0, 128, 255, 255)
+let shite_my_pantalogno := (74, 65, 42, 255)
+let perwinkle := (142, 130, 254, 255)
+let perkio_red := (255, 0, 0, 255)
+
+
+model Window { let oops : int = 0 }
+model Renderer { let oops : int = 0 }
+
+model Rect {
+    let pos : (int * int) = (0,0),
+    let size : (int * int) = (0,0),
+
+    let constructor : ((int * int), (int * int)) -> void = (pos: (int * int), size: (int * int)) : void => {
+        self.pos = pos;
+        self.size = size;
+    }
+}
+
+model SDL {
+    let window : Window? = nothing,
+    let renderer : Renderer? = none,
+
+    let init := (x: int): int => {
+        // let w : Window = self.window;
+        // let r : Renderer = self.renderer;
+        // banish w;
+        // banish r;
+        BEGIN_C
+        return SDL_Init(x);
+        END_C
+    },
+
+    let create_window := (title: char*, x: int, y: int, w: int, h: int, flags: int): void => {
+        let _w : Window = self.window!;
+        let set: int = 0;
+        BEGIN_C
+        _w = (void*) SDL_CreateWindow(title, x, y, w, h, flags);
+        set = (int) _w;
+        END_C;
+        if (set) {
+            self.window = some _w;
+        }
+    },
+
+    let get_error := () : char* => {
+        BEGIN_C
+        return SDL_GetError();
+        END_C;
+    },
+
+    let set_renderer_draw_color_tup := (colour: (int * int * int * int)) : void => {
+        self.set_renderer_draw_color(colour[0], colour[1], colour[2], colour[3]);
+    },
+    
+    let set_renderer_draw_color : (int, int, int, int) -> void = (a : int, b : int, c : int, d : int) : void => {
+        let _r : Renderer = self.renderer!;
+        BEGIN_C
+        SDL_SetRenderDrawColor((SDL_Renderer*)_r, a, b, c, d); // 0, 128, 255, 255 for Blue background
+        END_C
+    },
+    
+    let render_clear := () : void => {
+        let _r : Renderer = self.renderer!;
+        BEGIN_C
+        SDL_RenderClear((SDL_Renderer*)_r);
+        END_C
+    },
+
+    let render_present := () : void => {
+        let _r : Renderer = self.renderer!;
+        BEGIN_C
+        SDL_RenderPresent((SDL_Renderer*)_r);
+        END_C
+    },
+
+    let create_renderer := (a : int, b : int) : void => {
+        let _r : Renderer = self.renderer!;
+        let _w : Window = self.window!;
+        let set : int = 0;
+        BEGIN_C
+        _r = (void*)SDL_CreateRenderer((SDL_Window*)_w, a, b);
+        set = (int) _r;
+        END_C;
+        if (set) {
+            self.renderer = some _r;
+        }
+    },
+
+    let destroy_window := () : void => {
+        let _w :Window = self.window!;
+        BEGIN_C
+        SDL_DestroyWindow((SDL_Window*)_w);
+        END_C
+    },
+
+    let quit := () : void => {
+        BEGIN_C
+        SDL_Quit();
+        END_C
+    },
+
+    let render_fill_rect := (rect: Rect) : void => {
+        let x := rect.pos[0];
+        let y := rect.pos[1];
+        let w := rect.size[0];
+        let h := rect.size[1];
+
+        let _r : Renderer = self.renderer!;
+        BEGIN_C
+        SDL_Rect _rect = { x, y, w, h };
+        SDL_RenderFillRect((SDL_Renderer*)_r, &_rect);
+        END_C
+    },
+
+    let delay := (ms: int) : void => {
+        BEGIN_C
+        SDL_Delay(ms);
+        END_C
+    }
+}
+
+archetype Drawable {
+    position: (int * int) ,
+    move : (int, int) -> void,
+    draw : (SDL) -> void 
+}
+
+model Perkio: Drawable {
+    let position: (int * int) = (200,200),
+    
+    let move := (dirx: int, diry: int) : void => {
+        self.position[0] = self.position[0] + dirx;
+        self.position[1] = self.position[1] + diry;
+    },
+
+    let draw : (SDL) -> void = (sdl : SDL) : void => {
+        sdl.set_renderer_draw_color_tup (perkio_red);
+        let rect := summon Rect((self.position[0] - 10, self.position[1] - 40), (20, 40));
+        sdl.render_fill_rect(rect);
+        banish rect;
+    }
+}
+
+model Strozno: Drawable {
+    let position: (int * int) = (400,200),
+    
+    let move := (dirx: int, diry: int) : void => {
+        self.position[0] = self.position[0] + dirx;
+        self.position[1] = self.position[1] + diry;
+    },
+
+    let draw : (SDL) -> void = (sdl : SDL) : void => {
+        sdl.set_renderer_draw_color_tup (shite_my_pantalogno);
+        let rect := summon Rect((self.position[0] - 10, self.position[1] - 40), (20, 40));
+        sdl.render_fill_rect(rect);
+        banish rect;
+    }
+}
+
+// let dummyPerkio := summon Perkio()
+// let dummyDrawable : <Drawable> = (dummyPerkio ~> Drawable)
+
+model List {
+    let head : <Drawable>? = nothing,
+    let tail : List? = none,
+
+    let push_head := (x: <Drawable>) : List => {
+        if (!self.head?){
+            self.head = some x;
+            return self;
+        }else{
+            let newList := summon List();
+            newList.head = some x;
+            newList.tail = self;
+            return newList;
+        }
+    },
+
+    let push_tail := (x: <Drawable>) : void => {
+        let newList := summon List();
+        newList.head = some x;
+        let current := self;
+        while (current.tail?) {
+            current = current.tail!;
+        };
+        current.tail = newList;
+    },
+
+    let foreach : ((<Drawable>, SDL) -> void, SDL) -> void = (f : (<Drawable>, SDL) -> void, sdl : SDL) : void => {
+        if (self.head?) {   
+            f(self.head!, sdl);
+            if (self.tail?) {
+                self.tail!.foreach(f, sdl);
+            }
+        }
+    }
+}
+
+model GameController {
+    let state : List = summon List(),
+
+    let world_bounds := summon Rect((0, 0), (800, 500)),
+    let gravity := (0, 1),
+
+    let loop := (sdl : SDL, window_size : (int * int)) : void => {
+        // draw sky
+        sdl.set_renderer_draw_color_tup (sky_blue);
+        sdl.render_clear();
+
+        // draw ground
+        sdl.set_renderer_draw_color_tup (ground_green);
+        let rect := summon Rect((0, window_size[1] - 200), (window_size[0], 200));
+        sdl.render_fill_rect(rect);
+        banish rect;
+
+        self.state.foreach( (d : <Drawable>, sdl: SDL) : void => {
+            d.move(0, 2);
+        }, sdl );
+        
+        self.state.foreach( (d : <Drawable>, sdl: SDL) : void => {
+            d.draw(sdl);
+        }, sdl );
+
+        sdl.render_present();
+    }
+}
+
+let delta_t := 1./60.
+
+fun main (): int {
+    let window_size := (800, 600);
+    let sdl := summon SDL();
+
+    if (sdl.init(SDL_INIT_VIDEO) < 0) {
+        printf("SDL could not initialize! SDL_Error: %s\n", sdl.get_error());
+        return 1;
+    };
+    
+    sdl.create_window("Simple SDL Window",
+                        SDL_WINDOWPOS_CENTERED,
+                        SDL_WINDOWPOS_CENTERED,
+                        window_size[0], window_size[1],
+                        SDL_WINDOW_SHOWN);
+
+    if (!sdl.window?) {
+        printf("Window could not be created! SDL_Error: %s\n", sdl.get_error());
+        sdl.quit();
+        return 1;
+    };
+
+    sdl.create_renderer(-1, SDL_RENDERER_ACCELERATED);
+
+    if (!sdl.renderer?) {
+        printf("Renderer could not be created! SDL_Error: %s\n", sdl.get_error());
+        sdl.destroy_window();
+        sdl.quit();
+        return 1;
+    };
+
+    let game := summon GameController();
+    let perkio := summon Perkio();
+    let strozno := summon Strozno();
+    game.state = game.state.push_head((perkio ~> Drawable));
+    game.state = game.state.push_head((strozno ~> Drawable));
+    
+    let quit : int = 0;
+    while (!quit) {
+        BEGIN_C
+        SDL_Event e;
+        while (SDL_PollEvent(&e)) {
+            if (e.type == SDL_QUIT) {
+                quit = 1;
+            }
+        }
+        END_C;
+        game.loop(sdl, window_size);
+        
+        sdl.delay(16); // ~60 FPS idle delay
+    };
+
+    banish strozno;
+    banish perkio;
+    banish game;
+
+    return 0;
+}
