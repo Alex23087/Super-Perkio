@@ -211,7 +211,7 @@ model List {
         }
     }
 }
-
+// culo
 model GameController {
     let state : List = summon List(),
 

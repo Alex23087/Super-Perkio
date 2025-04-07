@@ -19,4 +19,4 @@ run: build
 	mkdir -p $(OUT)/$(shell dirname $<)
 	$(PERKC) $<
 	mv $(subst .perk,.c,$<) $(OUT)/$(subst .perk,.c,$<)
-	mv $(subst .perk,.ast,$<) $(OUT)/$(subst .perk,.ast,$<)
+	# mv $(subst .perk,.ast,$<) $(OUT)/$(subst .perk,.ast,$<)
