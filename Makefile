@@ -10,7 +10,7 @@ CSRC = $(patsubst %.perk,%.c,$(PERKSRC))
 OBJFILES = $(patsubst %.c,%.o,$(CSRC))
 
 build: $(CSRC)
-	$(CC) $(CFLAGS) $(LDFLAGS) $(OUT)/$(CSRC) -o $(OUT)/super_perkio
+	$(CC) $(CFLAGS) $(OUT)/$(CSRC) -o $(OUT)/super_perkio $(LDFLAGS)
 
 run: build
 	$(OUT)/super_perkio
