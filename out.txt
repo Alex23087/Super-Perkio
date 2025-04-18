@@ -1,0 +1,3721 @@
+mkdir -p out/src
+perkc src/main.perk
+typechecking toplevel
+typechecking toplevel
+typechecking toplevel
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+typechecking toplevel
+typechecking toplevel
+typechecking toplevel
+typechecking toplevel
+typechecking toplevel
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+matching types
+matching types
+typechecking toplevel
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking toplevel
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking toplevel
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking toplevel
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking toplevel
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+typechecking expression
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+typechecking toplevel
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+typechecking expression
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+typechecking toplevel
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+typechecking expression
+typechecking expression
+typechecking expression
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+typechecking toplevel
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+typechecking expression
+matching types
+typechecking expression
+matching types
+typechecking expression
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking expression
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+matching types
+typechecking expression
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+matching types
+matching types
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking expression
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+matching types
+typechecking expression
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+matching types
+typechecking expression
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+typechecking toplevel
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+typechecking toplevel
+matching types
+matching types
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+matching types
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+typechecking toplevel
+matching types
+matching types
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+matching types
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+typechecking toplevel
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+typechecking expression
+matching types
+typechecking expression
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking expression
+matching types
+typechecking expression
+matching type list
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking expression
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+matching types
+typechecking expression
+typechecking expression
+matching type list
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking expression
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+typechecking toplevel
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+typechecking expression
+matching type list
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+matching types
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+matching types
+typechecking expression
+matching type list
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+typechecking expression
+matching type list
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+dependencies of type aux
+typechecking toplevel
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+matching types
+typechecking toplevel
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking deferred function
+typechecking expression
+typechecking expression
+typechecking expression
+matching types
+matching types
+typechecking expression
+matching type list
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+typechecking expression
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching type list
+matching types
+typechecking expression
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+matching types
+matching types
+matching types
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching type list
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+typechecking expression
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching type list
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+typechecking expression
+matching types
+typechecking expression
+matching type list
+matching types
+matching types
+typechecking expression
+matching type list
+matching types
+matching types
+typechecking expression
+matching type list
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+matching types
+matching types
+typechecking expression
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+matching types
+typechecking expression
+typechecking expression
+typechecking expression
+typechecking expression
+matching type list
+matching types
+typechecking expression
+matching types
+dependencies of type
+dependencies of type aux
+dependencies of type aux
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen expr
+codegen command
+codegen command
+codegen command
+codegen command
+codegen expr
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+generate types (while iteration)
+mv src/main.c out/src/main.c
+# mv src/main.ast out/src/main.ast
+gcc -fdiagnostics-show-option -Wno-error=pointer-to-int-cast -Wno-error=int-to-pointer-cast -std=c99 -g out/./src/main.c -o out/super_perkio -lSDL2
+out/super_perkio

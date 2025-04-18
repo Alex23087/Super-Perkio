@@ -4,6 +4,9 @@ import "SDL2/SDL.h"
 
 extern printf : (char*, ...) -> int
 extern clock : () -> int
+extern CLOCKS_PER_SEC: int
+
+let CLOCKS_PER_MSEC := CLOCKS_PER_SEC / 1000
 
 // extern SDL_Init : int -> int
 // extern SDL_GetError : () ->  char*
@@ -239,7 +242,7 @@ model Strozno: Drawable, PhysicsObject {
     let position: (float * float) = (400.,200.),
     let velocity: (float * float) = (0., 0.),
     let angular_velocity: float = 0.0,
-    let bounciness: float = 1.1,
+    let bounciness: float = 0.9,
     let friction: float = 0.5,
     let rotation: float = 0.0,
     let is_grounded: int = 0,
@@ -295,15 +298,19 @@ model PhysicsManager {
     let world_bounds : Rect = summon Rect((0., 0.), (800., 500.)),
     let gravity : (float * float) = (0., 9.81),
 
-    let update_physics_obj : (int, <Drawable+PhysicsObject>) -> void = (delta_t: int, obj: <Drawable+PhysicsObject>) : void => {
+    let update_physics_obj : (float, <Drawable+PhysicsObject>) -> void = (delta_t: float, obj: <Drawable+PhysicsObject>) : void => {
         self.move(obj, obj.velocity[0], obj.velocity[1]);
         obj.rotation = obj.rotation + obj.angular_velocity * cast(float, delta_t);
     },
 
-    let update_physics := (delta_t: int, objs: void*) : void => {
+    let update_physics := (delta_t: float, objs: void*) : void => {
         let list := cast(List, objs);
+
+        let delta_t_schifated := *(cast(int*, &delta_t));
+
         list.foreach((d : <Drawable+PhysicsObject>) : void => {
-            self.accelerate(d, 0., cast(float, self.gravity[1]) * (cast(float, delta_t) /1000.));
+            let delta_t := *cast(float*, &delta_t_schifated);
+            self.accelerate(d, 0., cast(float, self.gravity[1]) * (cast(float, delta_t)));
             self.update_physics_obj(delta_t, d);
         });
     },
@@ -343,7 +350,9 @@ model GameController {
     let gravity : (float * float) = (0., 1.),
     let physics_manager : PhysicsManager = summon PhysicsManager(),
 
-    let loop := (sdl : SDL, delta_t: int) : void => {
+    let loop := (sdl : SDL, delta_t: float) : void => {
+
+
         // draw sky
         sdl.set_renderer_draw_color_tup (sky_blue);
         sdl.render_clear();
@@ -405,6 +414,11 @@ fun main (): int {
     let quit : int = 0;
     let before := 0;
 
+    let pressed_l := 0.;
+    let pressed_r := 0.; 
+    let pressed_u := 0.;
+    let pressed_d := 0.;
+
     while (!quit) {
         BEGIN_C
         SDL_Event e;
@@ -412,41 +426,89 @@ fun main (): int {
             if (e.type == SDL_QUIT) {
                 quit = 1;
             }
-            if (e.type == SDL_KEYDOWN) {
+            if (e.type == SDL_KEYDOWN && e.key.repeat == 0) {
                 if (e.key.keysym.sym == SDLK_w) {
                     END_C;
                     if (perkio.is_grounded == 1) {
-                        perkio.velocity[1] = - 5.0;
+                        perkio.velocity[1] = - 10.0;
                     };
+                    pressed_u = 1.0;
                     BEGIN_C
                 }
                 if (e.key.keysym.sym == SDLK_a) {
                     END_C;
-                    perkio.velocity[0] = perkio.velocity[0] - 5.0;
+                    pressed_l = 1.0;
                     BEGIN_C
                 }
                 if (e.key.keysym.sym == SDLK_s) {
                     END_C;
-                    perkio.velocity[1] =  perkio.velocity[1] + 5.0;
+                    pressed_d = 1.0;
                     BEGIN_C
                 }
                 if (e.key.keysym.sym == SDLK_d) {
                     END_C;
-                    perkio.velocity[0] =  perkio.velocity[0] + 5.0;
+                    pressed_r = 1.0;
+                    BEGIN_C
+                }
+            }
+
+            if (e.type == SDL_KEYUP) {
+                if (e.key.keysym.sym == SDLK_w) {
+                    END_C;
+                    pressed_u = 0.0;
+                    BEGIN_C
+                }
+                if (e.key.keysym.sym == SDLK_a) {
+                    END_C;
+                    pressed_l = 0.0;
+                    BEGIN_C
+                }
+                if (e.key.keysym.sym == SDLK_s) {
+                    END_C;
+                    pressed_d = 0.0;
+                    BEGIN_C
+                }
+                if (e.key.keysym.sym == SDLK_d) {
+                    END_C;
+                    pressed_r = 0.0;
                     BEGIN_C
                 }
             }
         }
         END_C;
 
-        let difference : int = ((clock() - before)) / 1000;
+        if(perkio.is_grounded) {
+            pressed_d = 0.0;
+        };
 
-        game.loop(sdl, difference);
+        perkio.velocity[0] = perkio.velocity[0] - (pressed_l * 1.0) + (pressed_r * 1.0);
+        perkio.velocity[1] = perkio.velocity[1] + (pressed_d * 1.0);
         
+        if (cast(int, (perkio.velocity[0] > 7.0))) {
+            perkio.velocity[0] = 7.0;
+        };
+
+        if (cast(int, (perkio.velocity[0] < -7.0))) {
+            perkio.velocity[0] = -7.0;
+        };
+        
+
+        let difference : float = cast(float, (clock() - before)) / cast(float, CLOCKS_PER_MSEC);
+        
+        let beginning_of_frame := clock();
+
+        let difference_schifated := *(cast(int*, &difference));
+
+        game.loop(sdl, target_framerate);
+        let delay := cast(int, (target_framerate*1000.0 - difference));
+        
+        sdl.delay(cast(int, if delay >= 0 then delay else 0)); // ~60 FPS idle delay
+
+        let frame_length := clock() - beginning_of_frame;
+        printf("%f\t%d\t%f\n", difference, delay, target_framerate);
+
         before = clock();
-        let delay := cast(int, 1000. * (target_framerate - cast(float, difference)));
-        printf("%d\n", delay);
-        sdl.delay(cast(int, if delay >= 0 then delay else 33)); // ~60 FPS idle delay
+        
     };
 
     banish strozno;
