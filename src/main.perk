@@ -41,6 +41,14 @@ fun clamp (x: float, min: float, max: float) : float {
     }}
 }
 
+fun lerp (v1 : (float * float), v2 : (float * float), alpha : float) : (float * float) {
+    return (v1[0] * (1. - alpha) + v2[0] * alpha, v1[1] * (1. - alpha) + v2[1] * alpha)
+}
+
+fun vsum (v1 : (float * float), v2 : (float * float)) : (float * float) {
+    return (v1[0] + v2[0], v1[1] + v2[1]);
+}
+
 model Window { let oops : int = 0 }
 model Renderer { let oops : int = 0 }
 
@@ -156,14 +164,14 @@ model SDL {
         END_C
     },
 
-    let create_texture := (format : int, access : int, w : int, h : int) : void* => { 
+    let create_texture := (format : int, access : int, w : int, h : int) : SDL_Texture* => { 
         let _r : Renderer = self.renderer!;
         BEGIN_C
         return SDL_CreateTexture((SDL_Renderer*)_r, format, access, w, h);
         END_C;
     },
 
-    let set_render_target := (texture: void*) : void => {
+    let set_render_target := (texture: SDL_Texture*) : void => {
         let _r : Renderer = self.renderer!;
         BEGIN_C
         SDL_SetRenderTarget((SDL_Renderer*)_r, (SDL_Texture*)texture);
@@ -177,7 +185,7 @@ model SDL {
         END_C
     },
 
-    let render_copy_ex := (texture: void*, rect: Rect, angle: float, center: (float * float), flip: int) : void => {
+    let render_copy_ex := (texture: SDL_Texture*, rect: Rect, angle: float, center: (float * float), flip: int) : void => {
         let _r : Renderer = self.renderer!;
         BEGIN_C
         // Relying on the underlying implementation of rects is not a good idea.
@@ -191,9 +199,10 @@ model SDL {
 
 
 archetype Drawable {
-    position: (float * float),
-    rotation: float,
-    draw : (SDL) -> void 
+    position : (float * float),
+    rotation : float,
+    texture : SDL_Texture*,
+    size : (float * float)
 }
 
 archetype PhysicsObject {
@@ -214,7 +223,7 @@ model Perkio: Drawable, PhysicsObject {
     let friction: float = 0.5,
     let rotation: float = 0.0,
     let is_grounded: int = 0,
-    let texture: void* = cast(void*, 0), // unsafe!!!!!!
+    let texture: SDL_Texture* = cast(SDL_Texture*, 0), // unsafe!!!!!!
 
     let size : (float * float) = (20., 40.),
 
@@ -240,6 +249,10 @@ model Perkio: Drawable, PhysicsObject {
 
 model Strozno: Drawable, PhysicsObject {
     let position: (float * float) = (400.,200.),
+    let size: (float * float) = (20.,40.),
+
+    let texture := cast(SDL_Texture*, 0), // unsafe!!!!!!
+
     let velocity: (float * float) = (0., 0.),
     let angular_velocity: float = 0.0,
     let bounciness: float = 0.9,
@@ -247,11 +260,13 @@ model Strozno: Drawable, PhysicsObject {
     let rotation: float = 0.0,
     let is_grounded: int = 0,
 
-    let draw : (SDL) -> void = (sdl : SDL) : void => {
+    let constructor : (SDL) -> void = (sdl : SDL) : void => {
+        self.texture = sdl.create_texture(SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, cast(int,self.size[0]), cast(int, self.size[1]));
+        sdl.set_render_target(self.texture);
         sdl.set_renderer_draw_color_tup (shite_my_pantalogno);
-        let rect := summon Rect((self.position[0] - 10., self.position[1] - 40.), (20., 40.));
-        sdl.render_fill_rect(rect);
-        banish rect;
+        sdl.render_clear();
+        sdl.set_render_target_none();
+
     }
 }
 
@@ -343,6 +358,28 @@ model PhysicsManager {
     }
 }
 
+model Camera {
+    let position : (float * float) = (0.,0.),
+    
+    let draw_background := (sdl : SDL) : void => {
+        // draw sky
+        sdl.set_renderer_draw_color_tup (sky_blue);
+        sdl.render_clear();
+
+        // draw ground
+        sdl.set_renderer_draw_color_tup (ground_green);
+        let rect := summon Rect((0., - self.position[1] +400. + cast(float, window_size[1] / 2)), (cast(float, window_size[0]), cast(float, window_size[1])));
+        sdl.render_fill_rect(rect);
+        banish rect;
+    },
+
+    let draw := (sdl : SDL, obj : <Drawable+PhysicsObject>) : void => {
+        let rect := summon Rect((obj.position[0] - obj.size[0] - self.position[0] + cast(float, window_size[0] / 2), obj.position[1] - obj.size[1] - self.position[1] + cast(float, window_size[1] / 2)), (obj.size[0], obj.size[1]));
+        sdl.render_copy_ex(obj.texture, rect, obj.rotation, (obj.size[0] / 2., obj.size[1] / 2.), SDL_FLIP_NONE);
+        banish rect;
+    }
+}
+
 model GameController {
     let state : List = summon List(),
 
@@ -350,29 +387,25 @@ model GameController {
     let gravity : (float * float) = (0., 1.),
     let physics_manager : PhysicsManager = summon PhysicsManager(),
 
+    let camera : Camera = summon Camera(),
+
     let loop := (sdl : SDL, delta_t: float) : void => {
 
 
-        // draw sky
-        sdl.set_renderer_draw_color_tup (sky_blue);
-        sdl.render_clear();
-
-        // draw ground
-        sdl.set_renderer_draw_color_tup (ground_green);
-        let rect := summon Rect((0., (cast(float, window_size[1])) - 200.), (cast(float, window_size[0]), 200.));
-        sdl.render_fill_rect(rect);
-        banish rect;
+        self.camera.draw_background(sdl);
 
         self.physics_manager.update_physics(delta_t, cast(void*, self.state));
         
         self.state.foreach((d : <Drawable+PhysicsObject>) : void => {
-            d.draw(sdl);
+            self.camera.draw(sdl, d);
         });
 
 
         sdl.render_present();
     }
 }
+
+
 
 fun main (): int {
     let sdl := summon SDL();
@@ -405,7 +438,7 @@ fun main (): int {
 
     let game := summon GameController();
     let perkio := summon Perkio(sdl);
-    let strozno := summon Strozno();
+    let strozno := summon Strozno(sdl);
     game.state = game.state.push_head((perkio ~> Drawable+PhysicsObject));
     game.state = game.state.push_head((strozno ~> Drawable+PhysicsObject));
 
@@ -484,6 +517,10 @@ fun main (): int {
         perkio.velocity[0] = perkio.velocity[0] - (pressed_l * 1.0) + (pressed_r * 1.0);
         perkio.velocity[1] = perkio.velocity[1] + (pressed_d * 1.0);
         
+        game.camera.position = lerp(game.camera.position, vsum(perkio.position, (0., -100.)), target_framerate * 2.);
+
+        printf("%f, %f\n", game.camera.position[0], game.camera.position[1]);
+
         if (cast(int, (perkio.velocity[0] > 7.0))) {
             perkio.velocity[0] = 7.0;
         };
@@ -505,7 +542,7 @@ fun main (): int {
         sdl.delay(cast(int, if delay >= 0 then delay else 0)); // ~60 FPS idle delay
 
         let frame_length := clock() - beginning_of_frame;
-        printf("%f\t%d\t%f\n", difference, delay, target_framerate);
+        //printf("%f\t%d\t%f\n", difference, delay, target_framerate);
 
         before = clock();
         
