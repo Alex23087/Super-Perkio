@@ -1,6 +1,10 @@
 import "stdio.h"
+import "time.h"
 import "SDL2/SDL.h"
+
 extern printf : (char*, ...) -> int
+extern clock : () -> int
+
 // extern SDL_Init : int -> int
 // extern SDL_GetError : () ->  char*
 // extern SDL_CreateWindow : (char*, int, int, int, int, int) -> Window
@@ -11,6 +15,9 @@ extern SDL_WINDOW_SHOWN : int
 extern SDL_INIT_VIDEO : int
 // extern SDL_Quit : () -> void
 // extern SDL_DestroyWindow : void* -> void
+extern SDL_PIXELFORMAT_RGBA8888 : int
+extern SDL_TEXTUREACCESS_TARGET : int
+extern SDL_FLIP_NONE : int
 
 let ground_green := (0, 150, 0, 255)
 let sky_blue := (0, 128, 255, 255)
@@ -18,15 +25,27 @@ let shite_my_pantalogno := (74, 65, 42, 255)
 let perwinkle := (142, 130, 254, 255)
 let perkio_red := (255, 0, 0, 255)
 
+let target_framerate := 1./60.
+let window_size := (800, 600)
+
+fun clamp (x: float, min: float, max: float) : float {
+    if (cast(int, x < min)) {
+        return min;
+    } else {if (cast(int, x > max)) {
+        return max;
+    } else {
+        return x;
+    }}
+}
 
 model Window { let oops : int = 0 }
 model Renderer { let oops : int = 0 }
 
 model Rect {
-    let pos : (int * int) = (0,0),
-    let size : (int * int) = (0,0),
+    let pos : (float * float) = (0.0,0.0),
+    let size : (float * float) = (0.0,0.0),
 
-    let constructor : ((int * int), (int * int)) -> void = (pos: (int * int), size: (int * int)) : void => {
+    let constructor : ((float * float), (float * float)) -> void = (pos: (float * float), size: (float * float)) : void => {
         self.pos = pos;
         self.size = size;
     }
@@ -132,42 +151,102 @@ model SDL {
         BEGIN_C
         SDL_Delay(ms);
         END_C
+    },
+
+    let create_texture := (format : int, access : int, w : int, h : int) : void* => { 
+        let _r : Renderer = self.renderer!;
+        BEGIN_C
+        return SDL_CreateTexture((SDL_Renderer*)_r, format, access, w, h);
+        END_C;
+    },
+
+    let set_render_target := (texture: void*) : void => {
+        let _r : Renderer = self.renderer!;
+        BEGIN_C
+        SDL_SetRenderTarget((SDL_Renderer*)_r, (SDL_Texture*)texture);
+        END_C
+    },
+
+    let set_render_target_none := () : void => {
+        let _r : Renderer = self.renderer!;
+        BEGIN_C
+        SDL_SetRenderTarget((SDL_Renderer*)_r, 0);
+        END_C
+    },
+
+    let render_copy_ex := (texture: void*, rect: Rect, angle: float, center: (float * float), flip: int) : void => {
+        let _r : Renderer = self.renderer!;
+        BEGIN_C
+        // Relying on the underlying implementation of rects is not a good idea.
+        // The best way would be to unpack it in perkelang and then pass it to C.
+        SDL_Rect _rect = { rect->pos._0, rect->pos._1, rect->size._0, rect->size._1 };
+        SDL_Point _center = { center._0, center._1 };
+        SDL_RenderCopyEx((SDL_Renderer*)_r, (SDL_Texture*)texture, 0, &_rect, angle, &_center, flip);
+        END_C
     }
 }
 
+
 archetype Drawable {
-    position: (int * int) ,
-    move : (int, int) -> void,
+    position: (float * float),
+    rotation: float,
     draw : (SDL) -> void 
 }
 
-model Perkio: Drawable {
-    let position: (int * int) = (200,200),
-    
-    let move := (dirx: int, diry: int) : void => {
-        self.position[0] = self.position[0] + dirx;
-        self.position[1] = self.position[1] + diry;
+archetype PhysicsObject {
+    position : (float * float),
+    rotation: float,
+    velocity: (float * float),
+    angular_velocity: float,
+    bounciness: float,
+    friction: float,
+    is_grounded: int
+}
+
+model Perkio: Drawable, PhysicsObject {
+    let position: (float * float) = (200.,200.),
+    let velocity: (float * float) = (0., 0.),
+    let angular_velocity: float = 0.0,
+    let bounciness: float = 0.5,
+    let friction: float = 0.5,
+    let rotation: float = 0.0,
+    let is_grounded: int = 0,
+    let texture: void* = cast(void*, 0), // unsafe!!!!!!
+
+    let size : (float * float) = (20., 40.),
+
+    let constructor : (SDL) -> void = (sdl : SDL) : void => {
+        self.texture = sdl.create_texture(SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, cast(int,self.size[0]), cast(int, self.size[1]));
+        sdl.set_render_target(self.texture);
+        sdl.set_renderer_draw_color_tup (perkio_red);
+        
+        sdl.render_clear();
+        // let rect := summon Rect((self.position[0] - 10., self.position[1] - 40.), (20., 40.));
+        // sdl.render_fill_rect(rect);
+        // banish rect;
+        
+        sdl.set_render_target_none();
     },
 
     let draw : (SDL) -> void = (sdl : SDL) : void => {
-        sdl.set_renderer_draw_color_tup (perkio_red);
-        let rect := summon Rect((self.position[0] - 10, self.position[1] - 40), (20, 40));
-        sdl.render_fill_rect(rect);
+        let rect := summon Rect((self.position[0] - self.size[0], self.position[1] - self.size[1]), (self.size[0], self.size[1]));
+        sdl.render_copy_ex(self.texture, rect, self.rotation, (self.size[0] / 2., self.size[1] / 2.), SDL_FLIP_NONE);
         banish rect;
     }
 }
 
-model Strozno: Drawable {
-    let position: (int * int) = (400,200),
-    
-    let move := (dirx: int, diry: int) : void => {
-        self.position[0] = self.position[0] + dirx;
-        self.position[1] = self.position[1] + diry;
-    },
+model Strozno: Drawable, PhysicsObject {
+    let position: (float * float) = (400.,200.),
+    let velocity: (float * float) = (0., 0.),
+    let angular_velocity: float = 0.0,
+    let bounciness: float = 1.1,
+    let friction: float = 0.5,
+    let rotation: float = 0.0,
+    let is_grounded: int = 0,
 
     let draw : (SDL) -> void = (sdl : SDL) : void => {
         sdl.set_renderer_draw_color_tup (shite_my_pantalogno);
-        let rect := summon Rect((self.position[0] - 10, self.position[1] - 40), (20, 40));
+        let rect := summon Rect((self.position[0] - 10., self.position[1] - 40.), (20., 40.));
         sdl.render_fill_rect(rect);
         banish rect;
     }
@@ -177,10 +256,10 @@ model Strozno: Drawable {
 // let dummyDrawable : <Drawable> = (dummyPerkio ~> Drawable)
 
 model List {
-    let head : <Drawable>? = nothing,
+    let head : <Drawable+PhysicsObject>? = nothing,
     let tail : List? = none,
 
-    let push_head := (x: <Drawable>) : List => {
+    let push_head := (x: <Drawable+PhysicsObject>) : List => {
         if (!self.head?){
             self.head = some x;
             return self;
@@ -192,7 +271,7 @@ model List {
         }
     },
 
-    let push_tail := (x: <Drawable>) : void => {
+    let push_tail := (x: <Drawable+PhysicsObject>) : void => {
         let newList := summon List();
         newList.head = some x;
         let current := self;
@@ -202,49 +281,91 @@ model List {
         current.tail = newList;
     },
 
-    let foreach : ((<Drawable>, SDL) -> void, SDL) -> void = (f : (<Drawable>, SDL) -> void, sdl : SDL) : void => {
+    let foreach : ((<Drawable+PhysicsObject>) -> void) -> void = (f : (<Drawable+PhysicsObject>) -> void) : void => {
         if (self.head?) {   
-            f(self.head!, sdl);
+            f(self.head!);
             if (self.tail?) {
-                self.tail!.foreach(f, sdl);
+                self.tail!.foreach(f);
             }
         }
     }
 }
-// culo
+
+model PhysicsManager {
+    let world_bounds : Rect = summon Rect((0., 0.), (800., 500.)),
+    let gravity : (float * float) = (0., 9.81),
+
+    let update_physics_obj : (int, <Drawable+PhysicsObject>) -> void = (delta_t: int, obj: <Drawable+PhysicsObject>) : void => {
+        self.move(obj, obj.velocity[0], obj.velocity[1]);
+        obj.rotation = obj.rotation + obj.angular_velocity * cast(float, delta_t);
+    },
+
+    let update_physics := (delta_t: int, objs: void*) : void => {
+        let list := cast(List, objs);
+        list.foreach((d : <Drawable+PhysicsObject>) : void => {
+            self.accelerate(d, 0., cast(float, self.gravity[1]) * (cast(float, delta_t) /1000.));
+            self.update_physics_obj(delta_t, d);
+        });
+    },
+    
+    let accelerate : (<Drawable+PhysicsObject>, float, float) -> void = (obj: <Drawable+PhysicsObject>, dirx: float, diry: float) : void => {
+        obj.velocity[0] = obj.velocity[0] + dirx;
+        obj.velocity[1] = obj.velocity[1] + diry;
+    },
+    
+    let angle_accelerate : (<Drawable+PhysicsObject>, float) -> void = (obj: <Drawable+PhysicsObject>, acc_delta: float) : void => {
+        obj.angular_velocity = obj.angular_velocity + acc_delta;
+    },
+
+    let move : (<Drawable+PhysicsObject>, float, float) -> void = (obj: <Drawable+PhysicsObject>, dirx: float, diry: float) : void => {
+        obj.position[0] = obj.position[0] + dirx;
+
+        if (cast(int, obj.position[1] + diry < 500.0)) {
+            obj.is_grounded = 0;
+            obj.position[1] = obj.position[1] + diry;
+        }
+        else {
+            obj.is_grounded = 1;
+            obj.position[1] = 500.0;
+            obj.velocity[1] = -obj.velocity[1]*obj.bounciness;
+            obj.velocity[0] = obj.velocity[0] * clamp(1. - obj.friction, 0., 1.);
+            // printf("BOUNCE! %f\n", 1. - obj.friction);
+            //self.angle_accelerate(obj, obj.velocity[0] * 6000. * delta_t);
+            obj.angular_velocity = obj.velocity[0] * 500.;
+        }
+    }
+}
+
 model GameController {
     let state : List = summon List(),
 
-    let world_bounds := summon Rect((0, 0), (800, 500)),
-    let gravity := (0, 1),
+    let world_bounds := summon Rect((0., 0.), (800., 500.)),
+    let gravity : (float * float) = (0., 1.),
+    let physics_manager : PhysicsManager = summon PhysicsManager(),
 
-    let loop := (sdl : SDL, window_size : (int * int)) : void => {
+    let loop := (sdl : SDL, delta_t: int) : void => {
         // draw sky
         sdl.set_renderer_draw_color_tup (sky_blue);
         sdl.render_clear();
 
         // draw ground
         sdl.set_renderer_draw_color_tup (ground_green);
-        let rect := summon Rect((0, window_size[1] - 200), (window_size[0], 200));
+        let rect := summon Rect((0., (cast(float, window_size[1])) - 200.), (cast(float, window_size[0]), 200.));
         sdl.render_fill_rect(rect);
         banish rect;
 
-        self.state.foreach( (d : <Drawable>, sdl: SDL) : void => {
-            d.move(0, 2);
-        }, sdl );
+        self.physics_manager.update_physics(delta_t, cast(void*, self.state));
         
-        self.state.foreach( (d : <Drawable>, sdl: SDL) : void => {
+        self.state.foreach((d : <Drawable+PhysicsObject>) : void => {
             d.draw(sdl);
-        }, sdl );
+        });
+
 
         sdl.render_present();
     }
 }
 
-let delta_t := 1./60.
-
 fun main (): int {
-    let window_size := (800, 600);
     let sdl := summon SDL();
 
     if (sdl.init(SDL_INIT_VIDEO) < 0) {
@@ -274,12 +395,16 @@ fun main (): int {
     };
 
     let game := summon GameController();
-    let perkio := summon Perkio();
+    let perkio := summon Perkio(sdl);
     let strozno := summon Strozno();
-    game.state = game.state.push_head((perkio ~> Drawable));
-    game.state = game.state.push_head((strozno ~> Drawable));
-    
+    game.state = game.state.push_head((perkio ~> Drawable+PhysicsObject));
+    game.state = game.state.push_head((strozno ~> Drawable+PhysicsObject));
+
+    perkio.velocity = (0.5, -2.);
+
     let quit : int = 0;
+    let before := 0;
+
     while (!quit) {
         BEGIN_C
         SDL_Event e;
@@ -287,11 +412,41 @@ fun main (): int {
             if (e.type == SDL_QUIT) {
                 quit = 1;
             }
+            if (e.type == SDL_KEYDOWN) {
+                if (e.key.keysym.sym == SDLK_w) {
+                    END_C;
+                    if (perkio.is_grounded == 1) {
+                        perkio.velocity[1] = - 5.0;
+                    };
+                    BEGIN_C
+                }
+                if (e.key.keysym.sym == SDLK_a) {
+                    END_C;
+                    perkio.velocity[0] = perkio.velocity[0] - 5.0;
+                    BEGIN_C
+                }
+                if (e.key.keysym.sym == SDLK_s) {
+                    END_C;
+                    perkio.velocity[1] =  perkio.velocity[1] + 5.0;
+                    BEGIN_C
+                }
+                if (e.key.keysym.sym == SDLK_d) {
+                    END_C;
+                    perkio.velocity[0] =  perkio.velocity[0] + 5.0;
+                    BEGIN_C
+                }
+            }
         }
         END_C;
-        game.loop(sdl, window_size);
+
+        let difference : int = ((clock() - before)) / 1000;
+
+        game.loop(sdl, difference);
         
-        sdl.delay(16); // ~60 FPS idle delay
+        before = clock();
+        let delay := cast(int, 1000. * (target_framerate - cast(float, difference)));
+        printf("%d\n", delay);
+        sdl.delay(cast(int, if delay >= 0 then delay else 33)); // ~60 FPS idle delay
     };
 
     banish strozno;
