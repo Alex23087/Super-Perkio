@@ -14,16 +14,25 @@ extern SDL_PIXELFORMAT_RGBA8888 : int
 extern SDL_TEXTUREACCESS_TARGET : int
 extern SDL_FLIP_NONE : int
 
+// Colours
 let ground_green := (0, 150, 0, 255)
 let sky_blue := (0, 128, 255, 255)
 let shite_my_pantalogno := (74, 65, 42, 255)
 let perwinkle := (142, 130, 254, 255)
 let perkio_red := (255, 0, 0, 255)
 
+// Game engine variables
 let CLOCKS_PER_MSEC := CLOCKS_PER_SEC / 1000
 let target_framerate := 1./60.
 let window_size := (800, 600)
 
+// Controls
+let pressed_l := 0.
+let pressed_r := 0.
+let pressed_u := 0.
+let pressed_d := 0.
+
+// Math functions
 fun clamp (x: float, min: float, max: float) : float {
     if (cast(int, x < min)) {
         return min;
@@ -204,7 +213,11 @@ archetype PhysicsObject {
     is_grounded: int
 }
 
-model Perkio: Drawable, PhysicsObject {
+archetype Actor {
+    act : () -> void
+}
+
+model Perkio: Drawable, PhysicsObject, Actor {
     let position: (float * float) = (200.,200.),
     let velocity: (float * float) = (0., 0.),
     let angular_velocity: float = 0.0,
@@ -222,9 +235,6 @@ model Perkio: Drawable, PhysicsObject {
         sdl.set_renderer_draw_color_tup (perkio_red);
         
         sdl.render_clear();
-        // let rect := summon Rect((self.position[0] - 10., self.position[1] - 40.), (20., 40.));
-        // sdl.render_fill_rect(rect);
-        // banish rect;
         
         sdl.set_render_target_none();
     },
@@ -233,10 +243,31 @@ model Perkio: Drawable, PhysicsObject {
         let rect := summon Rect((self.position[0] - self.size[0], self.position[1] - self.size[1]), (self.size[0], self.size[1]));
         sdl.render_copy_ex(self.texture, rect, self.rotation, (self.size[0] / 2., self.size[1] / 2.), SDL_FLIP_NONE);
         banish rect;
+    },
+
+    let has_jumped_after_ground : bool = false,
+
+    fun act () : void {
+        if(self.is_grounded) {
+            pressed_d = 0.0;
+            if(cast(bool, pressed_u < 1.0)) {
+                self.has_jumped_after_ground = false;
+            };
+        };
+
+        if (cast(bool, pressed_u > 0.0) && !self.has_jumped_after_ground) {
+            self.has_jumped_after_ground = true;
+            if (self.is_grounded == 1) {
+                self.velocity[1] = - 10.0;
+            };
+        };
+
+        self.velocity[0] = self.velocity[0] - (pressed_l * 1.0) + (pressed_r * 1.0);
+        self.velocity[1] = self.velocity[1] + (pressed_d * 1.0);
     }
 }
 
-model Strozno: Drawable, PhysicsObject {
+model Strozno: Drawable, PhysicsObject, Actor {
     let position: (float * float) = (400.,200.),
     let size: (float * float) = (20.,40.),
 
@@ -255,17 +286,18 @@ model Strozno: Drawable, PhysicsObject {
         sdl.set_renderer_draw_color_tup (shite_my_pantalogno);
         sdl.render_clear();
         sdl.set_render_target_none();
+    },
+
+    fun act (): void {
+        skip
     }
 }
 
-// let dummyPerkio := summon Perkio()
-// let dummyDrawable : <Drawable> = (dummyPerkio ~> Drawable)
-
 model List {
-    let head : <Drawable+PhysicsObject>? = nothing,
+    let head : <Drawable+PhysicsObject+Actor>? = nothing,
     let tail : List? = none,
 
-    fun push_head (x: <Drawable+PhysicsObject>) : List {
+    fun push_head (x: <Drawable+PhysicsObject+Actor>) : List {
         if (!self.head?){
             self.head = some x;
             return self;
@@ -277,7 +309,7 @@ model List {
         }
     },
 
-    fun push_tail (x: <Drawable+PhysicsObject>) : void {
+    fun push_tail (x: <Drawable+PhysicsObject+Actor>) : void {
         let newList := summon List();
         newList.head = some x;
         let current := self;
@@ -287,7 +319,7 @@ model List {
         current.tail = newList;
     },
 
-    fun foreach (f : (<Drawable+PhysicsObject>) => void) : void {
+    fun foreach (f : (<Drawable+PhysicsObject+Actor>) => void) : void {
         if (self.head?) {
             f(self.head!);
             if (self.tail?) {
@@ -301,7 +333,7 @@ model PhysicsManager {
     let world_bounds : Rect = summon Rect((0., 0.), (800., 500.)),
     let gravity : (float * float) = (0., 9.81),
 
-    fun update_physics_obj (delta_t: float, obj: <Drawable+PhysicsObject>) : void {
+    fun update_physics_obj (delta_t: float, obj: <Drawable+PhysicsObject+Actor>) : void {
         self.move(obj, obj.velocity[0], obj.velocity[1]);
         obj.rotation = obj.rotation + obj.angular_velocity * cast(float, delta_t);
     },
@@ -309,22 +341,22 @@ model PhysicsManager {
     fun update_physics (delta_t: float, objs: void*) : void {
         let list := cast(List, objs);
 
-        list.foreach((d : <Drawable+PhysicsObject>) : void {
+        list.foreach((d : <Drawable+PhysicsObject+Actor>) : void {
             self.accelerate(d, 0., cast(float, self.gravity[1]) * (cast(float, delta_t)));
             self.update_physics_obj(delta_t, d);
         });
     },
     
-    fun accelerate (obj: <Drawable+PhysicsObject>, dirx: float, diry: float) : void {
+    fun accelerate (obj: <Drawable+PhysicsObject+Actor>, dirx: float, diry: float) : void {
         obj.velocity[0] = obj.velocity[0] + dirx;
         obj.velocity[1] = obj.velocity[1] + diry;
     },
 
-    fun angle_accelerate (obj: <Drawable+PhysicsObject>, acc_delta: float) : void {
+    fun angle_accelerate (obj: <Drawable+PhysicsObject+Actor>, acc_delta: float) : void {
         obj.angular_velocity = obj.angular_velocity + acc_delta;
     },
 
-    fun move (obj: <Drawable+PhysicsObject>, dirx: float, diry: float) : void {
+    fun move (obj: <Drawable+PhysicsObject+Actor>, dirx: float, diry: float) : void {
         obj.position[0] = obj.position[0] + dirx;
 
         if (cast(int, obj.position[1] + diry < 500.0)) {
@@ -358,7 +390,7 @@ model Camera {
         banish rect;
     },
 
-    fun draw (sdl : SDL, obj : <Drawable+PhysicsObject>) : void {
+    fun draw (sdl : SDL, obj : <Drawable+PhysicsObject+Actor>) : void {
         let rect := summon Rect((obj.position[0] - obj.size[0] - self.position[0] + cast(float, window_size[0] / 2), obj.position[1] - obj.size[1] - self.position[1] + cast(float, window_size[1] / 2)), (obj.size[0], obj.size[1]));
         sdl.render_copy_ex(obj.texture, rect, obj.rotation, (obj.size[0] / 2., obj.size[1] / 2.), SDL_FLIP_NONE);
         banish rect;
@@ -375,13 +407,15 @@ model GameController {
     let camera : Camera = summon Camera(),
 
     fun loop (sdl : SDL, delta_t: float) : void {
-
+        self.state.foreach((d : <Drawable+PhysicsObject+Actor>) : void {
+            d.act();
+        });
 
         self.camera.draw_background(sdl);
 
         self.physics_manager.update_physics(delta_t, cast(void*, self.state));
         
-        self.state.foreach((d : <Drawable+PhysicsObject>) : void {
+        self.state.foreach((d : <Drawable+PhysicsObject+Actor>) : void {
             self.camera.draw(sdl, d);
         });
 
@@ -389,8 +423,6 @@ model GameController {
         sdl.render_present();
     }
 }
-
-
 
 fun main (): int {
     let sdl := summon SDL();
@@ -424,18 +456,13 @@ fun main (): int {
     let game := summon GameController();
     let perkio := summon Perkio(sdl);
     let strozno := summon Strozno(sdl);
-    game.state = game.state.push_head((perkio ~> Drawable+PhysicsObject));
-    game.state = game.state.push_head((strozno ~> Drawable+PhysicsObject));
+    game.state = game.state.push_head((perkio ~> Drawable+PhysicsObject+Actor));
+    game.state = game.state.push_head((strozno ~> Drawable+PhysicsObject+Actor));
 
     perkio.velocity = (0.5, -2.);
 
     let quit : int = 0;
     let before := 0;
-
-    let pressed_l := 0.;
-    let pressed_r := 0.; 
-    let pressed_u := 0.;
-    let pressed_d := 0.;
 
     while (!quit) {
         BEGIN_C
@@ -447,9 +474,6 @@ fun main (): int {
             if (e.type == SDL_KEYDOWN && e.key.repeat == 0) {
                 if (e.key.keysym.sym == SDLK_w) {
                     END_C;
-                    if (perkio.is_grounded == 1) {
-                        perkio.velocity[1] = - 10.0;
-                    };
                     pressed_u = 1.0;
                     BEGIN_C
                 }
@@ -494,13 +518,6 @@ fun main (): int {
             }
         }
         END_C;
-
-        if(perkio.is_grounded) {
-            pressed_d = 0.0;
-        };
-
-        perkio.velocity[0] = perkio.velocity[0] - (pressed_l * 1.0) + (pressed_r * 1.0);
-        perkio.velocity[1] = perkio.velocity[1] + (pressed_d * 1.0);
         
         game.camera.position = lerp(game.camera.position, vsum(perkio.position, (0., -100.)), target_framerate * 2.);
 
